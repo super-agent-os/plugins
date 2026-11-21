@@ -1,0 +1,15 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "super-artifacts": {
+      "type": "streamable-http",
+      "url": "https://superartifacts.app/mcp",
+      "headers": { "Authorization": "Bearer ${SUPER_ARTIFACTS_KEY}" }
+    },
+    "super-agent-mail": {
+      "type": "streamable-http",
+      "url": "https://superagentmail.app/mcp",
+      "headers": { "Authorization": "Bearer ${SUPER_AGENT_MAIL_KEY}" }
+    }
+  }
+}

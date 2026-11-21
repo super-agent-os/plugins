@@ -1,0 +1,60 @@
+[
+  {
+    "id": "artifacts",
+    "name": "Super Artifacts",
+    "label": "Artifacts",
+    "keyPrefix": "sa_",
+    "identity": { "path": "/v1/whoami", "tool": "super_whoami", "accountField": "handle" },
+    "serverName": "super-artifacts",
+    "keyEnv": "SUPER_ARTIFACTS_KEY",
+    "skillPath": "skills/super-artifacts/SKILL.md",
+    "availability": "available",
+    "offeredByDefault": true,
+    "webhooks": { "events": ["mention.created", "comment.created", "artifact.published"] },
+    "mcpUrls": {
+      "dev": "http://localhost/mcp",
+      "preview": "https://pr-${PR_NUMBER}-stg.superartifacts.app/mcp",
+      "staging": "https://stg.superartifacts.app/mcp",
+      "production": "https://superartifacts.app/mcp"
+    }
+  },
+  {
+    "id": "graph",
+    "name": "Super Graph",
+    "label": "Graph",
+    "keyPrefix": "sag_",
+    "identity": null,
+    "serverName": "super-graph",
+    "keyEnv": "SUPER_GRAPH_KEY",
+    "skillPath": "skills/super-graph/SKILL.md",
+    "availability": "early-access",
+    "offeredByDefault": false,
+    "webhooks": null,
+    "mcpUrls": {
+      "dev": "http://graph.localhost/mcp",
+      "preview": "https://pr-${PR_NUMBER}-stg.superartifacts.app/mcp",
+      "staging": "https://stg.supergraph.app/mcp",
+      "production": "https://supergraph.app/mcp"
+    }
+  },
+  {
+    "id": "mail",
+    "name": "Super Agent Mail",
+    "label": "Mail",
+    "keyPrefix": "sam_",
+    "identity": { "path": "/whoami", "tool": "mail_mailboxes", "accountField": null },
+    "serverName": "super-agent-mail",
+    "keyEnv": "SUPER_AGENT_MAIL_KEY",
+    "skillPath": "skills/super-agent-mail/SKILL.md",
+    "availability": "available",
+    "offeredByDefault": true,
+    "webhooks": null,
+    "webhookUnavailableReason": "shared endpoint pending",
+    "mcpUrls": {
+      "dev": "http://mail.localhost/mcp",
+      "preview": "https://pr-${PR_NUMBER}-stg.superartifacts.app/mcp",
+      "staging": "https://stg.superagentmail.app/mcp",
+      "production": "https://superagentmail.app/mcp"
+    }
+  }
+]
