@@ -1,0 +1,12 @@
+{
+  "name": "superagentos",
+  "label": "Super Agent OS",
+  "description": "Connect Artifacts and Mail in this Hermes profile.",
+  "icon": "ExternalLink",
+  "tab": {
+    "path": "/superagentos",
+    "position": "after:skills"
+  },
+  "entry": "dist/index.js",
+  "api": "plugin_api.py"
+}

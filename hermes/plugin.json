@@ -1,0 +1,41 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "superagentos",
+  "version": "0.285.4",
+  "description": "Connect Super Artifacts and Super Agent Mail with separate product keys. Publish pages and read submissions; read and send screened mail.",
+  "author": {
+    "name": "Super Artifacts",
+    "url": "https://superartifacts.app"
+  },
+  "homepage": "https://superartifacts.app",
+  "repository": "https://github.com/super-agent-os/plugins",
+  "license": "MIT",
+  "keywords": [
+    "artifacts",
+    "publish",
+    "hosting",
+    "forms",
+    "mcp",
+    "oauth",
+    "mail",
+    "superagentos"
+  ],
+  "extensions": {
+    "com.nousresearch.hermes": {
+      "config_schema": {
+        "api_key": {
+          "type": "secret",
+          "env": "SUPER_ARTIFACTS_KEY",
+          "label": "Super Artifacts key",
+          "description": "Paste a key here, or turn on Super Agent OS in Capabilities → Plugins and use Connect on its settings page. Saved only in this profile."
+        },
+        "mail_key": {
+          "type": "secret",
+          "env": "SUPER_AGENT_MAIL_KEY",
+          "label": "Super Agent Mail key",
+          "description": "Paste a key here, or turn on Super Agent OS in Capabilities → Plugins and use Connect on its settings page. Saved only in this profile."
+        }
+      }
+    }
+  }
+}
